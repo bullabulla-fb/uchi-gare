@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1000574680022",
+    "project_id": "uchi-gare",
+    "storage_bucket": "uchi-gare.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1000574680022:android:95138e64a09dccff958277",
+        "android_client_info": {
+          "package_name": "com.ankong.uchigare"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9wGktHnFpEjcEhAytG1GLZ6yBi1xa7LU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
