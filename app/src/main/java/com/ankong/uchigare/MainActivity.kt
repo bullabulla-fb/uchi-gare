@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import com.ankong.uchigare.ui.MainScreen
+import com.ankong.uchigare.navigation.AppNavGraph
 import com.ankong.uchigare.ui.theme.うちガレTheme
 
 class MainActivity : ComponentActivity() {
@@ -13,7 +13,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             うちガレTheme {
-                MainScreen()
+                AppNavGraph()
             }
         }
     }

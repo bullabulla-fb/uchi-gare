@@ -3,6 +3,9 @@ package com.ankong.uchigare.ui
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
+import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
@@ -17,7 +20,7 @@ import androidx.compose.ui.Modifier
 import com.ankong.uchigare.navigation.BottomNavItem
 
 @Composable
-fun MainScreen() {
+fun MainScreen(onCreateGarage: () -> Unit) {
     var selectedItem by rememberSaveable { mutableStateOf(BottomNavItem.MODEL) }
 
     Scaffold(
@@ -32,7 +35,14 @@ fun MainScreen() {
                     )
                 }
             }
-        }
+        },
+        floatingActionButton = {
+            if (selectedItem == BottomNavItem.GARAGE) {
+                FloatingActionButton(onClick = onCreateGarage) {
+                    Icon(Icons.Default.Add, contentDescription = "ガレージを追加")
+                }
+            }
+        },
     ) { innerPadding ->
         Box(
             modifier = Modifier
